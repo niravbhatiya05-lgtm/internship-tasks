@@ -1,7 +1,11 @@
-numbers = [12, 7, 18, 25, 30, 41, 56, 63]
+def check_number(num):
+    if num.is_integer():
+        print("Whole number")
+    else:
+        print("Decimal number")
 
-print("Even numbers are:")
+def main():
+    number = float(input("Enter a float: "))
+    check_number(number)
 
-for num in numbers:
-    if num % 2 == 0:
-        print(num)
+main()

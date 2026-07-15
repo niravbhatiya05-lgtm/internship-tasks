@@ -1,10 +1,11 @@
-numbers = [25, 60, 45, 80, 10, 55, 90, 35]
+def check_number(num):
+    if num % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
 
-minimum = numbers[0]
+def main():
+    number = int(input("Enter a number: "))
+    check_number(number)
 
-for num in numbers:
-    if num < minimum:
-        minimum = num
-
-print("List:", numbers)
-print("Minimum number:", minimum)
+main()

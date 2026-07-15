@@ -1,14 +1,15 @@
-numbers = [10, -5, 20, -15, 0, 30, -8, 12]
+def calculate_grade(marks):
+    if marks >= 90:
+        print("Grade A")
+    elif marks >= 75:
+        print("Grade B")
+    elif marks >= 50:
+        print("Grade C")
+    else:
+        print("Fail")
 
-positive = 0
-negative = 0
+def main():
+    marks = float(input("Enter marks: "))
+    calculate_grade(marks)
 
-for num in numbers:
-    if num > 0:
-        positive = positive + 1
-    elif num < 0:
-        negative = negative + 1
-
-print("List:", numbers)
-print("Positive numbers:", positive)
-print("Negative numbers:", negative)
+main()

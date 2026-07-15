@@ -1,6 +1,13 @@
-numbers = (10, 20, 30, 40, 50)
+def check_temperature(temp):
+    if temp >= 35:
+        print("Hot")
+    elif temp >= 20:
+        print("Warm")
+    else:
+        print("Cold")
 
-print("Tuple elements are:")
+def main():
+    temperature = float(input("Enter temperature: "))
+    check_temperature(temperature)
 
-for num in numbers:
-    print(num)
+main()

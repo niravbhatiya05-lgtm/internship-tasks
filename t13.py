@@ -1,4 +1,9 @@
-text = input("Enter a string: ")
+def multiplication_table(num):
+    for i in range(1, 11):
+        print(num, "x", i, "=", num * i)
 
-for ch in text:
-    print(ch)
+def main():
+    number = int(input("Enter a number: "))
+    multiplication_table(number)
+
+main()

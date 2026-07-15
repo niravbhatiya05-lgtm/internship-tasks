@@ -1,10 +1,11 @@
-numbers = [25, 60, 45, 80, 10, 55, 90, 35]
+def check_eligibility(age):
+    if age >= 18:
+        print("Eligible to vote")
+    else:
+        print("Not eligible to vote")
 
-count = 0
-0
-for num in numbers:
-    if num > 50:
-        count = count + 1
+def main():
+    age = int(input("Enter age: "))
+    check_eligibility(age)
 
-print("List:", numbers)
-print("Count of numbers greater than 50:", count)
+main()

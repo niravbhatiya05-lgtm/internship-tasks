@@ -1,10 +1,11 @@
-text = input("Enter a string: ")
+def factorial(num):
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+    print("Factorial:", fact)
 
-count = 0
+def main():
+    number = int(input("Enter a number: "))
+    factorial(number)
 
-for ch in text:
-    if (ch >= "a" and ch <= "z") or (ch >= "A" and ch <= "Z"):
-        if ch != "a" and ch != "e" and ch != "i" and ch != "o" and ch != "u" and ch != "A" and ch != "E" and ch != "I" and ch != "O" and ch != "U":
-            count = count + 1
-
-print("Number of consonants:", count)
+main()

@@ -1,7 +1,15 @@
-numbers = (12, 45, 28, 67, 19, 30, 52, 10)
+def find_max(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
 
-print("Numbers greater than 30:")
+def main():
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    num3 = float(input("Enter third number: "))
+    print("Maximum:", find_max(num1, num2, num3))
 
-for num in numbers:
-    if num > 30:
-        print(num)
+main()

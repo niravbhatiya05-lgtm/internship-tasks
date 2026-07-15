@@ -1,21 +1,18 @@
-text = input("Enter a String: ")
+def odd_numbers(data):
+    for num in data:
+        if num % 2 != 0:
+            print(num)
 
-uppercase = 0
-lowercase = 0
-digits = 0
-special = 0
+numbers = ()
 
-for ch in text:
-    if ch >= "A" and ch <= "Z":
-        uppercase = uppercase + 1
-    elif ch >= "a" and ch <= "z":
-        lowercase = lowercase + 1
-    elif ch >= "0" and ch <= "9":
-        digits = digits + 1
-    else:
-        special = special + 1
+n = int(input("Enter the number of elements: "))
 
-print("Uppercase Letters:", uppercase)
-print("Lowercase Letters:", lowercase)
-print("Digits:", digits)
-print("Special Characters:", special)
+temp = []
+
+for i in range(n):
+    num = int(input("Enter number: "))
+    temp.append(num)
+
+numbers = tuple(temp)
+
+odd_numbers(numbers)

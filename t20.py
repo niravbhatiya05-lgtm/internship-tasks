@@ -1,17 +1,15 @@
-students = {
-    "Rahul": 85,
-    "Priya": 92,
-    "Amit": 78,
-    "Neha": 88
-}
+def check_prime(num):
+    if num <= 1:
+        print("Not Prime")
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                print("Not Prime")
+                return
+        print("Prime")
 
-topper = ""
-highest = 0
+def main():
+    number = int(input("Enter a number: "))
+    check_prime(number)
 
-for name in students:
-    if students[name] > highest:
-        highest = students[name]
-        topper = name
-
-print("Topper:", topper)
-print("Marks:", highest)
+main()

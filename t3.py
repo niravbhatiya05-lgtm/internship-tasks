@@ -1,7 +1,11 @@
-numbers = [12, 7, 18, 25, 30, 41, 56, 63]
+def check_character(ch):
+    if ch.lower() in "aeiou":
+        print("Vowel")
+    else:
+        print("Consonant")
 
-print("Odd numbers are:")
+def main():
+    character = input("Enter a character: ")
+    check_character(character)
 
-for num in numbers:
-    if num % 2 != 0:
-        print(num)
+main()

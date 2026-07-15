@@ -1,9 +1,13 @@
-text = input("Enter a string: ")
+def sum_list(numbers):
+    print("Sum:", sum(numbers))
 
-count = 0
+def main():
+    size = int(input("Enter list size: "))
+    numbers = []
 
-for ch in text:
-    if ch >= "A" and ch <= "Z":
-        count = count + 1
+    for i in range(size):
+        numbers.append(int(input("Enter element: ")))
 
-print("Number of uppercase letters:", count)
+    sum_list(numbers)
+
+main()

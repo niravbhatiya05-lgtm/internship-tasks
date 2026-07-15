@@ -1,10 +1,17 @@
-ch = input("Enter a Character: ")
+def count_vowels(characters):
+    count = 0
+    for ch in characters:
+        if ch.lower() in "aeiou":
+            count += 1
+    print("Vowels:", count)
 
-if ch == "a" or ch == "e" or ch == "i" or ch == "o" or ch == "u" or ch == "A" or ch == "E" or ch == "I" or ch == "O" or ch == "U":
-    print("Vowel")
-elif (ch >= "a" and ch <= "z") or (ch >= "A" and ch <= "Z"):
-    print("Consonant")
-elif ch >= "0" and ch <= "9":
-    print("Digit")
-else:
-    print("Special Character")
+def main():
+    size = int(input("Enter list size: "))
+    characters = []
+
+    for i in range(size):
+        characters.append(input("Enter character: "))
+
+    count_vowels(characters)
+
+main()

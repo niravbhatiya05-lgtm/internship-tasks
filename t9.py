@@ -1,9 +1,11 @@
-numbers = (10, 25, 15, 30, 5, 18, 40, 12)
+def check_password(password):
+    if len(password) >= 8:
+        print("Valid Password")
+    else:
+        print("Invalid Password")
 
-count = 0
+def main():
+    password = input("Enter password: ")
+    check_password(password)
 
-for num in numbers:
-    if num < 20:
-        count = count + 1
-print("Tuple:", numbers)
-print("Count of numbers less than 20:", count)
+main()

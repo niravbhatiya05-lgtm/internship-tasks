@@ -1,21 +1,17 @@
-marks = (
-    int(input("Enter Marks 1: ")),
-    int(input("Enter Marks 2: ")),
-    int(input("Enter Marks 3: ")),
-    int(input("Enter Marks 4: ")),
-    int(input("Enter Marks 5: "))
-)
+def print_passed(students):
+    for name, marks in students.items():
+        if marks >= 35:
+            print(name, marks)
 
-total = 0
+def main():
+    size = int(input("Enter number of students: "))
+    students = {}
 
-for mark in marks:
-    total = total + mark
+    for i in range(size):
+        name = input("Enter student name: ")
+        marks = float(input("Enter marks: "))
+        students[name] = marks
 
-average = total / 5
+    print_passed(students)
 
-print("Average:", average)
-
-if average >= 50:
-    print("Pass")
-else:
-    print("Fail")
+main()

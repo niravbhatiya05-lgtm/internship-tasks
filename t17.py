@@ -1,17 +1,15 @@
-numbers = []
-even = []
-odd = []
+def print_even(numbers):
+    for num in numbers:
+        if num % 2 == 0:
+            print(num)
 
-for i in range(5):
-    num = int(input("Enter Number: "))
-    numbers.append(num)
+def main():
+    size = int(input("Enter set size: "))
+    numbers = set()
 
-for num in numbers:
-    if num % 2 == 0:
-        even.append(num)
-    else:
-        odd.append(num)
+    for i in range(size):
+        numbers.add(int(input("Enter element: ")))
 
-print("Numbers:", numbers)
-print("Even Numbers:", even)
-print("Odd Numbers:", odd)
+    print_even(numbers)
+
+main()

@@ -1,18 +1,13 @@
-students = []
+def check_case(ch):
+    if ch.isupper():
+        print("Uppercase")
+    elif ch.islower():
+        print("Lowercase")
+    else:
+        print("Not an alphabet")
 
-for i in range(3):
-    name = input("Enter Name: ")
-    marks = int(input("Enter Marks: "))
+def main():
+    character = input("Enter a character: ")
+    check_case(character)
 
-    student = {
-        "name": name,
-        "marks": marks
-    }
-
-    students.append(student)
-
-print("Passed Students:")
-
-for student in students:
-    if student["marks"] >= 35:
-        print(student["name"])
+main()

@@ -1,9 +1,11 @@
-numbers = (10, 20, 30, 40, 50)
+def check_leap_year(year):
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        print("Leap Year")
+    else:
+        print("Not a Leap Year")
 
-total = 0
+def main():
+    year = int(input("Enter a year: "))
+    check_leap_year(year)
 
-for num in numbers:
-    total = total + num
-
-print("Tuple:", numbers)
-print("Sum of tuple elements:", total)
+main()

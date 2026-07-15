@@ -1,8 +1,16 @@
-numbers = {10, 20, 30, 40, 50}
+def find_sum(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
 
-num = int(input("Enter a Number: "))
+def main():
+    size = int(input("Enter list size: "))
+    numbers = []
 
-if num in numbers:
-    print("Number Found")
-else:
-    print("Number Not Found")
+    for i in range(size):
+        numbers.append(int(input("Enter element: ")))
+
+    print("Sum:", find_sum(numbers))
+
+main()

@@ -1,9 +1,13 @@
-numbers = [10, 20, 30, 40, 50]
+def check_number(num):
+    if num > 0:
+        print("Positive")
+    elif num < 0:
+        print("Negative")
+    else:
+        print("Zero")
 
-total = 0
+def main():
+    number = int(input("Enter an integer: "))
+    check_number(number)
 
-for num in numbers:
-    total = total + num
-
-print("List:", numbers)
-print("Sum of all integers:", total)
+main()

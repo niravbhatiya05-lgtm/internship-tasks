@@ -1,30 +1,17 @@
-student = {
-    "name": input("Enter Name: "),
-    "marks": []
-}
+def count_positive(numbers):
+    count = 0
+    for num in numbers:
+        if num > 0:
+            count += 1
+    return count
 
-total = 0
+def main():
+    size = int(input("Enter list size: "))
+    numbers = []
 
-for i in range(5):
-    mark = int(input("Enter Mark: "))
-    student["marks"].append(mark)
+    for i in range(size):
+        numbers.append(int(input("Enter element: ")))
 
-for mark in student["marks"]:
-    total = total + mark
+    print("Positive numbers:", count_positive(numbers))
 
-average = total / 5
-
-if average >= 90:
-    grade = "A"
-elif average >= 75:
-    grade = "B"
-elif average >= 50:
-    grade = "C"
-else:
-    grade = "F"
-
-print("Name:", student["name"])
-print("Marks:", student["marks"])
-print("Total:", total)
-print("Average:", average)
-print("Grade:", grade)
+main()

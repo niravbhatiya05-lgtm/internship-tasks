@@ -1,9 +1,15 @@
-text = input("Enter a string: ")
+def print_positive(numbers):
+    for num in numbers:
+        if num > 0:
+            print(num)
 
-count = 0
+def main():
+    size = int(input("Enter list size: "))
+    numbers = []
 
-for ch in text:
-    if ch >= "a" and ch <= "z":
-        count = count + 1
+    for i in range(size):
+        numbers.append(int(input("Enter element: ")))
 
-print("Number of lowercase letters:", count)
+    print_positive(numbers)
+
+main()

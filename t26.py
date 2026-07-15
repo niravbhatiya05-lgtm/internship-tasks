@@ -1,20 +1,16 @@
-set1 = {10, 20, 30, 40, 50}
-set2 = {30, 40, 50, 60, 70}
+def palindrome(num):
+    original = num
+    reverse = 0
 
-print("Common Elements:")
+    while num > 0:
+        digit = num % 10
+        reverse = reverse * 10 + digit
+        num = num // 10
 
-for i in set1:
-    if i in set2:
-        print(i)
+    if original == reverse:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
 
-print("Unique Elements of Set 1:")
-
-for i in set1:
-    if i not in set2:
-        print(i)
-
-print("Unique Elements of Set 2:")
-
-for i in set2:
-    if i not in set1:
-        print(i)
+number = int(input("Enter a number: "))
+palindrome(number)
